@@ -1,0 +1,8 @@
+1. выбрать все страны, в которых есть город Moscow
+SELECT Name FROM 'Country' WHERE 'Code' IN (SELECT 'Coutry code' FROM city WHERE Name = 'Moscow') 
+
+2.подсчитать количество стран, в которых говорят на английском
+ SELECT COUNT('country code') AS count FROM 'Coutry language' WHERE language = 'Russia'
+
+3. для стран, в которых говорят на английком, вывести список всех городов.
+ SELECT DISTINCT 'Name' FROM City WHERE 'Country code' IN (SELECT "Country code" FROM WHERE language = 'English')
